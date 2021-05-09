@@ -1,6 +1,11 @@
 ### Overview
 
 Created date picker component by using React/XState
+DEMO: https://kkzleo.github.io/react-datepicker/
+
+#### Debug mode
+
+If you wanna inspect XState machine, try to add url param `?debug=true` to open state chart
 
 ### Plugin/Library
 
