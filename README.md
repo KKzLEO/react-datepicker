@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+### Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created date picker component by using React/XState
 
-## Available Scripts
+### Plugin/Library
 
-In the project directory, you can run:
+1. styled-components
+2. xstate
+3. react
+4. react-icons
 
-### `npm start`
+### Environment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Node 14
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### How to run
 
-### `npm test`
+1. npm install
+2. npm run start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Props
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Name       | Type           | Default    | Required? | Description                                                                                            |
+| ---------- | -------------- | ---------- | --------- | ------------------------------------------------------------------------------------------------------ |
+| onChange   | func           | noop       | false     | A hook it will be triggered after user selected the date or inputted a correct date string.            |
+| value      | String or Date | new Date() | false     | The initial value of date picker                                                                       |
+| label      | String         | ''         | false     | The text of date picker                                                                                |
+| format     | String         | YYYY/MM/DD | false     | The format of date, if you enable input mode, it will be used to check if the input string is correct. |
+| id         | String         | ''         | false     | The ID of DOM                                                                                          |
+| ref        | React Ref      | null       | false     | The ref of input                                                                                       |
+| className  | String         | ''         | false     | The class name of root component of date picker                                                        |
+| hasError   | Boolean        | false      | false     | Using helper text as error message and showing it below the input field                                |
+| helperText | String         | ''         | false     | The text it will be displayed below the input field                                                    |
+| icon       | node           | null       | false     | Icon of calendar                                                                                       |
+| inputMode  | Boolean        | false      | false     | If true, user can input date string                                                                    |
