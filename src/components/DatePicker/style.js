@@ -25,12 +25,15 @@ export const Input = styled.input`
   }
 `
 
-export const IconContainer = styled.div``
+export const IconContainer = styled.div`
+  flex: 0 0 30px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+`
 
 export const Icon = styled(MdDateRange)`
-  flex: 0 0 30px;
   color: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
 `
 
 export const Label = styled.label`

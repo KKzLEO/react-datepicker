@@ -85,7 +85,7 @@ const DatePicker = ({
           onChange={handleInputChange}
         />
         <Style.IconContainer onClick={openCalendar}>
-          {CustomIcon ? <CustomIcon /> : <Style.Icon size={20} />}
+          {CustomIcon ? CustomIcon : <Style.Icon size={20} />}
         </Style.IconContainer>
       </Style.InputContainer>
       {renderMessage()}
