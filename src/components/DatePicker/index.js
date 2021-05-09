@@ -46,6 +46,18 @@ const DatePicker = ({
     send('OPEN')
   }
 
+  const renderMessage = () => {
+    if (state.matches('typing.invalid')) {
+      return <Style.ErrorMessage>{invalidFormatMessage}</Style.ErrorMessage>
+    }
+
+    if (hasError && helperText) {
+      return <Style.ErrorMessage>{helperText}</Style.ErrorMessage>
+    }
+
+    if (helperText) return <Style.Message>{helperText}</Style.Message>
+  }
+
   return (
     <Style.Container ref={containerRef} className={className}>
       <Calendar
@@ -54,13 +66,20 @@ const DatePicker = ({
         containerRef={containerRef}
       />
 
-      {label && <Style.Label htmlFor={id}>{label}</Style.Label>}
+      {label && (
+        <Style.Label
+          {...(id && { htmlFor: id })}
+          error={hasError || state.matches('typing.invalid')}
+        >
+          {label}
+        </Style.Label>
+      )}
 
       <Style.InputContainer>
         <Style.Input
           type="text"
           ref={ref}
-          id={id}
+          {...(id && { id })}
           value={inputDateString}
           onClick={handleInputClick}
           onChange={handleInputChange}
@@ -69,13 +88,7 @@ const DatePicker = ({
           {CustomIcon ? <CustomIcon /> : <Style.Icon size={20} />}
         </Style.IconContainer>
       </Style.InputContainer>
-      {state.matches('typing.invalid') && (
-        <Style.ErrorMessage>{invalidFormatMessage}</Style.ErrorMessage>
-      )}
-      {hasError && helperText && (
-        <Style.ErrorMessage>{helperText}</Style.ErrorMessage>
-      )}
-      {helperText && <Style.Message>{helperText}</Style.Message>}
+      {renderMessage()}
     </Style.Container>
   )
 }
