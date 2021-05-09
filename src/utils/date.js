@@ -95,7 +95,7 @@ export const format = (date, format = 'YYYY/MM/DD') => {
 export const convert24HourTo12 = (hour) => hour % 12 || 12
 
 export const isValidDate = (dateString, format = 'YYYY/MM/DD') => {
-  // Check if it can be coverted to date obj
+  // Check if it can be converted to date obj
   if (!isDate(new Date(dateString))) return false
 
   // Check length
