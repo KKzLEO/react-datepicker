@@ -12,7 +12,7 @@ export const Container = styled.div`
   /* visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')}; */
   opacity: 0;
   animation: ${(props) => (props.visible ? fadeIn : '')};
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
 
   position: absolute;
