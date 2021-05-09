@@ -34,13 +34,14 @@ export const Icon = styled(MdDateRange)`
 `
 
 export const Label = styled.label`
-  color: rgba(0, 0, 0, 0.54);
+  color: ${(props) => (props.error ? '#db3d44' : 'rgba(0, 0, 0, 0.54)')};
   font-size: 14px;
 `
 
 export const Message = styled.div`
   font-size: 12px;
   margin-top: 4px;
+  color: rgba(0, 0, 0, 0.54);
 `
 
 export const ErrorMessage = styled(Message)`
