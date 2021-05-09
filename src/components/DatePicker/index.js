@@ -19,6 +19,7 @@ const DatePicker = ({
   hasError,
   helperText,
   invalidFormatMessage,
+  canInput,
 }) => {
   const [state, send] = useMachine(datePickerMachine, {
     devTools: true,
@@ -26,6 +27,7 @@ const DatePicker = ({
       selectedDate: isNil(value) ? new Date() : new Date(value),
       format,
       onChangeHook: onChange,
+      canInput,
     },
   })
   const containerRef = useRef(null)
@@ -90,6 +92,7 @@ DatePicker.defaultProps = {
   ref: null,
   className: '',
   invalidFormatMessage: 'Invalid format',
+  canInput: false,
 }
 
 DatePicker.propTypes = {
@@ -104,6 +107,7 @@ DatePicker.propTypes = {
   hasError: PropTypes.bool,
   helperText: PropTypes.string,
   invalidFormatMessage: PropTypes.string,
+  canInput: PropTypes.bool,
 }
 
 export default DatePicker

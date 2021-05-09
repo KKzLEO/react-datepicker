@@ -12,6 +12,7 @@ export const datePickerMachine = createMachine(
       selectedDate: new Date(),
       calendarActor: null,
       onChangeHook: () => {},
+      canInput: true,
     },
     states: {
       startup: {
@@ -21,7 +22,10 @@ export const datePickerMachine = createMachine(
       idle: {
         on: {
           OPEN: { actions: 'openCalendar' },
-          CLICK: 'typing',
+          CLICK: [
+            { target: 'typing', cond: 'canInput' },
+            { actions: 'openCalendar' },
+          ],
         },
       },
       typing: {
@@ -62,6 +66,7 @@ export const datePickerMachine = createMachine(
   {
     guards: {
       isValidDate: ({ format }, { date }) => isValidDate(date, format),
+      canInput: ({ canInput }) => canInput,
     },
     actions: {
       init: assign({
