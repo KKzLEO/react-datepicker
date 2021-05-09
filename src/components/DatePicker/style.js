@@ -39,10 +39,10 @@ export const Label = styled.label`
 `
 
 export const Message = styled.div`
-  font-size: 14px;
+  font-size: 12px;
+  margin-top: 4px;
 `
 
 export const ErrorMessage = styled(Message)`
   color: #db3d44;
-  font-size: 14px;
 `
