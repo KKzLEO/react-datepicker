@@ -1,10 +1,12 @@
 import DemoPage from 'components/page/Demo'
-
 import { inspect } from '@xstate/inspect'
+import { getUrlParams } from 'utils/base'
 
-inspect({
-  iframe: false,
-})
+if (getUrlParams().debug) {
+  inspect({
+    iframe: false,
+  })
+}
 
 function App() {
   return <DemoPage />
