@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { datePickerMachine } from 'machines/datePicker'
 import { useMachine } from '@xstate/react'
-import { noop } from 'utils/base'
+import { noop, isNil } from 'utils/base'
 import Calendar from 'components/Calendar'
 
 import * as Style from './style'
@@ -23,7 +23,7 @@ const DatePicker = ({
   const [state, send] = useMachine(datePickerMachine, {
     devTools: true,
     context: {
-      selectedDate: new Date(value),
+      selectedDate: isNil(value) ? new Date() : new Date(value),
       format,
       onChangeHook: onChange,
     },
