@@ -1,4 +1,4 @@
-import { getDaysInMonth, substract, add, getDacade } from 'utils/date'
+import { getDaysInMonth, subtract, add, getDacade } from 'utils/date'
 import { GRIDS, MAX_YEARS, MIN_YEARS } from 'constants/calendar'
 
 export const generateCalender = (year, month) => {
@@ -7,7 +7,7 @@ export const generateCalender = (year, month) => {
   const weekNumber = dateObj.getDay()
 
   const prevMonthCalendar = Array.from({ length: weekNumber }, (_, index) => {
-    return substract(dateObj, { days: weekNumber - index })
+    return subtract(dateObj, { days: weekNumber - index })
   })
 
   const thisMonthCalendar = Array.from(

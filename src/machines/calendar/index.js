@@ -3,7 +3,7 @@ import {
   generateMonthCalender,
   generateYearCalender,
 } from 'utils/calendar'
-import { substract, add, isSameMonth, isSameDacade } from 'utils/date'
+import { subtract, add, isSameMonth, isSameDacade } from 'utils/date'
 import { isNil } from 'utils/base'
 import { createMachine, assign, sendParent } from 'xstate'
 
@@ -43,7 +43,7 @@ export const createCalendarMachine = ({ initDate }) =>
                 NAV_UP: 'selectingMonth',
                 PREV: {
                   actions: [
-                    { type: 'substractCalendarDate', payload: { months: 1 } },
+                    { type: 'subtractCalendarDate', payload: { months: 1 } },
                     'updateDayCalendar',
                   ],
                 },
@@ -69,7 +69,7 @@ export const createCalendarMachine = ({ initDate }) =>
                 PREV: {
                   actions: [
                     {
-                      type: 'substractCalendarDate',
+                      type: 'subtractCalendarDate',
                       payload: { years: 1 },
                     },
                     'updateMonthCalendar',
@@ -156,11 +156,11 @@ export const createCalendarMachine = ({ initDate }) =>
             return newDate
           },
         }),
-        substractCalendarDate: assign({
+        subtractCalendarDate: assign({
           calendarDate: ({ calendarDate }, _, { action: { payload } }) => {
             const { months, years } = payload
 
-            return substract(calendarDate, { months, years })
+            return subtract(calendarDate, { months, years })
           },
         }),
         addCalendarDate: assign({

@@ -11,7 +11,7 @@ export const add = (date, { days, months, years }) => {
   return dateObj
 }
 
-export const substract = (date, { days, months, years }) => {
+export const subtract = (date, { days, months, years }) => {
   return add(date, { days: -days, months: -months, years: -years })
 }
 
