@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 300px;
   min-height: 200px;
   padding: 20px 10px 20px 10px;
-  z-index: 5;
+  z-index: ${(props) => (props.visible ? 5 : -1)};
 
   /* visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')}; */
   opacity: 0;
