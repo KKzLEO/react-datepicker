@@ -26,7 +26,13 @@ const YearCalendar = ({ selectedDate, handleClickItem, calendar }) => {
 
 YearCalendar.propTypes = {
   selectedDate: PropTypes.instanceOf(Date).isRequired,
-  calendar: PropTypes.arrayOf(PropTypes.string).isRequired,
+  calendar: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+      PropTypes.oneOf([null]),
+    ])
+  ).isRequired,
   handleClickItem: PropTypes.func.isRequired,
 }
 

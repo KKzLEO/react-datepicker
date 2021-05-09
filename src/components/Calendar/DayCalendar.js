@@ -41,6 +41,7 @@ const DayCalendar = ({
 
 DayCalendar.propTypes = {
   selectedDate: PropTypes.instanceOf(Date).isRequired,
+  calendarDate: PropTypes.instanceOf(Date).isRequired,
   calendar: PropTypes.arrayOf(PropTypes.instanceOf(Date)).isRequired,
   handleClickItem: PropTypes.func.isRequired,
 }

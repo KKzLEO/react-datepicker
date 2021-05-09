@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import * as Style from './style'
 import useClickOutside from 'hooks/useClickOutside'
@@ -83,6 +83,10 @@ const Calendar = ({ actor, selectedDate, containerRef }) => {
   )
 }
 
-Calendar.propTypes = {}
+Calendar.propTypes = {
+  actor: PropTypes.any.isRequired,
+  selectedDate: PropTypes.instanceOf(Date).isRequired,
+  containerRef: PropTypes.any.isRequired,
+}
 
 export default Calendar
