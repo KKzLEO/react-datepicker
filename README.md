@@ -39,3 +39,15 @@ If you wanna inspect XState machine, try to add url param `?debug=true` to open 
 | icon                 | node           | null           | false     | Icon of calendar                                                                                                       |
 | canInput             | Boolean        | false          | false     | If true, user can input date string                                                                                    |
 | invalidFormatMessage | String         | Invalid format | false     | If the input of date string is incorrect, the message will be displayed below the input field and OVERRIDE helper text |
+
+### Support Browsers
+
+- [x] Chrome
+- [] IE 11
+- [x] Firefox
+- [x] Edge
+
+### TODO
+
+- [] Write more unit tests
+- [] Use flex to implement calendar instead of grid because styled component doesn't support autoprefixer
