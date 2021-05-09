@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import Calendar from './components/Calendar'
+import DatePicker from 'components/DatePicker'
+
+import { inspect } from '@xstate/inspect'
+
+inspect({
+  iframe: false,
+})
+
+const FORMAT = 'YYYY-MM-DD'
 
 function App() {
+  const handleChange = (date) => console.log('date', date)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <DatePicker
+      onChange={handleChange}
+      label="生日"
+      value={new Date()}
+      format={FORMAT}
+      invalidFormatMessage={`格式必須為 ${FORMAT}`}
+    />
+  )
 }
 
-export default App;
+export default App
