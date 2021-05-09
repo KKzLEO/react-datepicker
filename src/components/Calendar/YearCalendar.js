@@ -10,7 +10,7 @@ const YearCalendar = ({ selectedDate, handleClickItem, calendar }) => {
     <Style.GridContainer rows={YEAR_ROWS} columns={YEAR_COLUMNS}>
       {calendar.map((year, index) => (
         <Style.GridItem
-          // key={year}
+          key={`${year}-${index}`}
           active={year === selectedDate.getFullYear()}
           onClick={handleClickItem({ year })}
           disable={!isSameDacade(year, calendar[1])}
