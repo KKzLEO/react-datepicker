@@ -60,6 +60,17 @@ const DemoPage = () => {
       </Style.Group>
       <Style.Group>
         <DatePicker
+          id="react-date-picker"
+          onChange={setInput}
+          label="有設 ID 可以點 label input"
+          value={input}
+          format={FORMAT}
+          invalidFormatMessage={`格式必須為 ${FORMAT}`}
+          canInput
+        />
+      </Style.Group>
+      <Style.Group>
+        <DatePicker
           onChange={setInput}
           label="有 helperText"
           value={input}
