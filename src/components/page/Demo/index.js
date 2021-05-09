@@ -72,6 +72,16 @@ const DemoPage = () => {
       <Style.Group>
         <DatePicker
           onChange={setInput}
+          label="可以改 icon"
+          value={input}
+          format={FORMAT}
+          invalidFormatMessage={`格式必須為 ${FORMAT}`}
+          icon={<Style.CustomCalendarIcon size={20} />}
+        />
+      </Style.Group>
+      <Style.Group>
+        <DatePicker
+          onChange={setInput}
           label="有 helperText"
           value={input}
           format={FORMAT}
