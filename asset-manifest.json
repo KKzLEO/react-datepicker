@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-datepicker/static/css/main.f8f2f3e6.chunk.css",
-    "main.js": "/react-datepicker/static/js/main.39c1663a.chunk.js",
-    "main.js.map": "/react-datepicker/static/js/main.39c1663a.chunk.js.map",
-    "runtime-main.js": "/react-datepicker/static/js/runtime-main.ab01b1ef.js",
-    "runtime-main.js.map": "/react-datepicker/static/js/runtime-main.ab01b1ef.js.map",
-    "static/js/2.ebff1f3f.chunk.js": "/react-datepicker/static/js/2.ebff1f3f.chunk.js",
-    "static/js/2.ebff1f3f.chunk.js.map": "/react-datepicker/static/js/2.ebff1f3f.chunk.js.map",
-    "static/js/3.43e99c41.chunk.js": "/react-datepicker/static/js/3.43e99c41.chunk.js",
-    "static/js/3.43e99c41.chunk.js.map": "/react-datepicker/static/js/3.43e99c41.chunk.js.map",
+    "main.js": "/react-datepicker/static/js/main.fe008b90.chunk.js",
+    "main.js.map": "/react-datepicker/static/js/main.fe008b90.chunk.js.map",
+    "runtime-main.js": "/react-datepicker/static/js/runtime-main.cc4854e9.js",
+    "runtime-main.js.map": "/react-datepicker/static/js/runtime-main.cc4854e9.js.map",
+    "static/js/2.f6b8763e.chunk.js": "/react-datepicker/static/js/2.f6b8763e.chunk.js",
+    "static/js/2.f6b8763e.chunk.js.map": "/react-datepicker/static/js/2.f6b8763e.chunk.js.map",
+    "static/js/3.f4003021.chunk.js": "/react-datepicker/static/js/3.f4003021.chunk.js",
+    "static/js/3.f4003021.chunk.js.map": "/react-datepicker/static/js/3.f4003021.chunk.js.map",
     "index.html": "/react-datepicker/index.html",
     "static/css/main.f8f2f3e6.chunk.css.map": "/react-datepicker/static/css/main.f8f2f3e6.chunk.css.map",
-    "static/js/2.ebff1f3f.chunk.js.LICENSE.txt": "/react-datepicker/static/js/2.ebff1f3f.chunk.js.LICENSE.txt"
+    "static/js/2.f6b8763e.chunk.js.LICENSE.txt": "/react-datepicker/static/js/2.f6b8763e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ab01b1ef.js",
-    "static/js/2.ebff1f3f.chunk.js",
+    "static/js/runtime-main.cc4854e9.js",
+    "static/js/2.f6b8763e.chunk.js",
     "static/css/main.f8f2f3e6.chunk.css",
-    "static/js/main.39c1663a.chunk.js"
+    "static/js/main.fe008b90.chunk.js"
   ]
 }
