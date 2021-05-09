@@ -32,4 +32,4 @@ Created date picker component by using React/XState
 | hasError   | Boolean        | false      | false     | Using helper text as error message and showing it below the input field                                |
 | helperText | String         | ''         | false     | The text it will be displayed below the input field                                                    |
 | icon       | node           | null       | false     | Icon of calendar                                                                                       |
-| inputMode  | Boolean        | false      | false     | If true, user can input date string                                                                    |
+| canInput   | Boolean        | false      | false     | If true, user can input date string                                                                    |
