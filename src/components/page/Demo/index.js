@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import DatePicker from 'components/DatePicker'
 import * as Style from './style'
 
@@ -6,6 +6,8 @@ const FORMAT = 'YYYY-MM-DD'
 
 const DemoPage = () => {
   const [input, setInput] = useState(null)
+
+  const ref = useRef(null)
 
   return (
     <Style.Container>
@@ -87,6 +89,19 @@ const DemoPage = () => {
           format={FORMAT}
           invalidFormatMessage={`格式必須為 ${FORMAT}`}
           helperText="我是 helper text"
+        />
+      </Style.Group>
+      <Style.Group>
+        <DatePicker
+          onChange={setInput}
+          label="ref"
+          value={input}
+          format={FORMAT}
+          inputRef={ref}
+          {...(ref?.current?.clientHeight && {
+            helperText: `client height: ${ref?.current?.clientHeight}`,
+          })}
+          invalidFormatMessage={`格式必須為 ${FORMAT}`}
         />
       </Style.Group>
     </Style.Container>
