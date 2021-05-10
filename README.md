@@ -32,7 +32,7 @@ If you wanna inspect XState machine, try to add url param `?debug=true` to open 
 | label                | String         | ''             | false     | The text of date picker                                                                                                |
 | format               | String         | YYYY/MM/DD     | false     | The format of date, if you enable input mode, it will be used to check if the input string is correct.                 |
 | id                   | String         | ''             | false     | The ID of DOM                                                                                                          |
-| ref                  | React Ref      | null           | false     | The ref of input                                                                                                       |
+| inputRef             | React Ref      | null           | false     | The ref of input                                                                                                       |
 | className            | String         | ''             | false     | The class name of root component of date picker                                                                        |
 | hasError             | Boolean        | false          | false     | Using helper text as error message and showing it below the input field                                                |
 | helperText           | String         | ''             | false     | The text it will be displayed below the input field                                                                    |
