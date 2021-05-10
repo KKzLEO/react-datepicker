@@ -14,7 +14,7 @@ const DatePicker = ({
   format,
   value,
   className,
-  ref,
+  inputRef,
   icon: CustomIcon,
   hasError,
   helperText,
@@ -78,7 +78,7 @@ const DatePicker = ({
       <Style.InputContainer>
         <Style.Input
           type="text"
-          ref={ref}
+          ref={inputRef}
           {...(id && { id })}
           value={inputDateString}
           onClick={handleInputClick}
@@ -102,7 +102,7 @@ DatePicker.defaultProps = {
   helperText: '',
   hasError: false,
   icon: null,
-  ref: null,
+  inputRef: null,
   className: '',
   invalidFormatMessage: 'Invalid format',
   canInput: false,
@@ -115,7 +115,7 @@ DatePicker.propTypes = {
   format: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
   className: PropTypes.string,
-  ref: PropTypes.any,
+  inputRef: PropTypes.any,
   icon: PropTypes.node,
   hasError: PropTypes.bool,
   helperText: PropTypes.string,
