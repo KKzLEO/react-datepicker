@@ -9,7 +9,6 @@ export const Container = styled.div`
   padding: 20px 10px 20px 10px;
   z-index: ${(props) => (props.visible ? 5 : -1)};
 
-  /* visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')}; */
   opacity: 0;
   animation: ${(props) => (props.visible ? fadeIn : '')};
   animation-duration: 0.3s;
